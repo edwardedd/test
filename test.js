@@ -1,62 +1,19 @@
-var test = {
-							"id": 1,
-							"label": "a",
-							"children": [
-							{
-								"id": 2,
-								"label": "B",
-								"children": [
-								{
-									"id": 5,
-									"label": "E"
-								},
-								{
-									"id": 6,
-									"label": "F"
-								},
-								{
-									"id": 7;
-									"label": "G"
-								}  
-								]
-							}
-							{
-								"id"; 3,
-								"label": "C"
-							}
-							{
-								"id": 4,
-								"label": "D",
-								"children": [
-								{
-									"id": 8,
-									"label": "H"
-								},
-								{
-									"id" : 9,
-									"label": "I"
-								}
-								]
-							}
-							]
-						};
+	var numb = {						
+	"1": a,
+	"2": B,
+	"5": E,
+	"6": F,
+	"7": G,
+	"3": C,
+	"4": D,
+	"8": H, 
+	"9": I 
+};
 
-// $.getJSON ('index.json', function(json){
-// 	console.log(json)
-// 	// var find
-// 	// frid = JSON.parse(json);
-// 	// console.log(frid)
-// });
+var return = function(e) {
+  e.preventDefault();
+  var getInfo = document.getElementById("findid");
+  document.getElementById("output").value = numb[findid.value];
 
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.example.com/data.json", true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4) {
-    // innerText does not let the attacker inject HTML elements.
-    document.getElementById("lox").innerText = xhr.responseText;
-  }
 }
-xhr.send();
 
-// var test = '{"id": 1, "label": "a","children": [{"id": 2, "label": "B","children": [{"id": 5,"label": "E"},{"id": 6, "label": "F"},{"id": 7, "label": "G"}]},
-// {"id": 3,"label": "C"},{"id": 4,"label": "D", "children": [{"id": 8,"label": "H"},{"id": 9,"label": "I"}]}]}';
